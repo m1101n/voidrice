@@ -3,14 +3,8 @@ super + w
     exo-open --launch WebBrowser
 
 # terminal emulator
-super + t
-    exo-open --launch TerminalEmulator
-
 super + Return
-    exo-open --launch TerminalEmulator
-
-ctrl + shift + t
-    exo-open --launch TerminalEmulator
+	kitty
 
 # file manager
 super + f
@@ -18,10 +12,6 @@ super + f
 
 # program launcher
 super + @space
-    rofi_run -r
-
-# program launcher
-alt + F1
     rofi_run -r
 
 # make sxhkd reload its configuration files:
