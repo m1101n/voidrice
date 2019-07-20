@@ -3,6 +3,9 @@
 # set root pointer
 xsetroot -cursor_name left_ptr
 
+# us to de layout
+setxkbmap -rules evdev -model pc101 -layout de -variant us
+
 # key bindings
 sxhkd &
 
