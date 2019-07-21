@@ -11,3 +11,7 @@ fi
 if [ ! -d ~/.config ] then 
     ln -s ~/Repositories/dotfiles/config ~/.config
 fi
+
+if [ ! -d ~/.scripts ] then 
+    ln -s ~/Repositories/dotfiles/scripts ~/.scripts
+fi
