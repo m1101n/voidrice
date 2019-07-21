@@ -16,6 +16,6 @@ inherit = bar/master
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor =
 
-modules-left   = bspwm menu
-modules-center = clock
-modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}
+modules-left   = bspwm
+modules-center = 
+modules-right  = temperature coreuse memory battery volume-bar date clock
