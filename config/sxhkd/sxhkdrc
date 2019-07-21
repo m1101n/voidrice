@@ -12,7 +12,7 @@ super + f
 
 # program launcher
 super + @space
-    rofi
+    rofi_run -r
 
 # make sxhkd reload its configuration files:
 super + shift + r
