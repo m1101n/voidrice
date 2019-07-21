@@ -1,25 +1,16 @@
 #!/bin/sh
 
-# set root pointer
-xsetroot -cursor_name left_ptr
+# key bindings
+sxhkd &
 
 # us to de layout
 setxkbmap -rules evdev -model pc101 -layout de -variant us
 
-# key bindings
-sxhkd &
-
-# wallpaper
-nitrogen --restore &
+# polybar 
+polybar bspwm-bar & 
 
 # launch compton
-al-compositor --start &
-
-# xfce settings
-xfsettingsd &
-
-# panel
-al-polybar-session &
+compton & 
 
 # Set some bsp specific stuff
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -31,7 +22,7 @@ bspc config right_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
 
-bspc config split_ratio 0.54
+bspc config split_ratio 0.5
 bspc config borderless_monocle false
 bspc config gapless_monocle true
 bspc config paddingless_monocle true
@@ -41,6 +32,3 @@ bspc config click_to_focus true
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
-
-bspc rule -a thunar desktop='^1' state=floating follow=on
-bspc rule -a firefox desktop='^2'
