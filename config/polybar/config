@@ -18,4 +18,4 @@ monitor =
 
 modules-left   = bspwm
 modules-center = 
-modules-right  = temperature coreuse memory battery volume-bar date clock
+modules-right  = network battery volume date clock
