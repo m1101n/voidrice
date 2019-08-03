@@ -1,9 +1,12 @@
 #!/bin/bash
 
-ln -s ~/Repositories/dotfiles/dmrc ~/.dmrc
-ln -s ~/Repositories/dotfiles/zshrc ~/.zshrc
-ln -s ~/Repositories/dotfiles/vimrc ~/.vimrc
-ln -s ~/Repositories/dotfiles/Xresources ~/.Xresources
+ln -s $HOME/Repositories/dotfiles/dmrc ~/.dmrc
+ln -s $HOME/Repositories/dotfiles/zshrc ~/.zshrc
+ln -s $HOME/Repositories/dotfiles/vimrc ~/.vimrc
+ln -s $HOME/Repositories/dotfiles/xprofile ~/.xprofile
+ln -s $HOME/Repositories/dotfiles/Xresources ~/.Xresources
+
+cp $HOME/Repositories/dotfiles/fonts/icomoon.ttf /usr/share/fonts/TTF/
 
 if [ ! -d ~/.zsh ] 
 then 

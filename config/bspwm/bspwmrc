@@ -13,7 +13,7 @@ polybar bspwm-bar &
 compton & 
 
 # Set some bsp specific stuff
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d           
 
 bspc config border_width 3
 bspc config window_gap 12

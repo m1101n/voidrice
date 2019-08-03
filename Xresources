@@ -20,6 +20,7 @@
 *.color14: #96b5b4
 *.color15: #c0c5ce
 
+
 ! Rofi
 rofi.font: monospace 12
 rofi.padding: 20

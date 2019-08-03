@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"

@@ -4,6 +4,7 @@
 [[ $- == *i* && $ZSH_VERSION ]] && SHELL=/usr/bin/zsh || return 0
 
 # set some defaults
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export MANWIDTH=90
 export HISTSIZE=10000
 export SAVEHIST=10000
@@ -21,9 +22,9 @@ typeset -U fpath=("$SIMPL_ZSH_DIR/"{completion,themes} $fpath)
 autoload -U promptinit && promptinit
 
 # source shell configuration files
-for f in "$SIMPL_ZSH_DIR"/{settings,plugins}/*?.zsh; do
-    . "$f" 2>/dev/null
-done
+#for f in "$SIMPL_ZSH_DIR"/{settings,plugins}/*?.zsh; do
+#    . "$f" 2>/dev/null
+#done
 
 # uncomment these lines to disable the multi-line prompt
 # add user@host, and remove the unicode line-wrap characters
@@ -33,10 +34,5 @@ done
 # PROMPT_USERFMT='%n%f@%F{red}%m'
 # PROMPT_ECODE="%(?,,%F{red}%? )"
 
-# load the prompt last
-prompt simpl
-
-# system info and AL ascii art
-al-info
-
-alias "rm"="sl"
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
