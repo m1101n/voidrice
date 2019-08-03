@@ -1,7 +1,0 @@
-[org/gnome/charmap/window-state]
-size=(936, 1024)
-
-[org/gnome/charmap]
-last-char=61611
-font='FontAwesome 16'
-group-by='block'
