@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# set up the two monitors for bspwm
+# NOTE This is a simplistic approach because I already know the settings I
+# want to apply.
+external_monitor=$(xrandr --query | grep 'DP1-1')
+if [[ $external_monitor = *connected* ]]; then
+    xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal --output DP1-1 --mode 1920x1080 --rotate normal --right-of eDP1
+    #monitors=(eDP1 DP1-1)
+    #for monitor in $(bspc query -M); do
+       #monitors+=$monitor
+    #done
+    #bspc monitor ${monitors[1]} -n 1 -d I II III IV
+    #bspc monitor ${monitors[2]} -n 2 -d V VI VII VIII IX X
+    bspc monitor eDP1 -d I II III IV V
+    bspc monitor DP1-1 -d VI VII VIII IX X
+else
+    bspc monitor -d I II III IV V VI VII VIII IX X
+fi

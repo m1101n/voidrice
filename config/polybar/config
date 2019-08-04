@@ -15,8 +15,15 @@ include-file = /home/mien/.config/polybar/modules.conf
 inherit = bar/master
 
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = eDP1
+monitor = ${env:MONITOR:eDP1}
 
 modules-left   = bspwm
-modules-center = 
+modules-center =
 modules-right  = coreuse memory battery volume date clock
+
+[bar/bspwm-bar-external]
+inherit = bar/master
+monitor = ${env:MONITOR:DP1-1}
+modules-left   = bspwm
+modules-center =
+modules-right  = coreuse memory volume date clock

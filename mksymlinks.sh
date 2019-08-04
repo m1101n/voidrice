@@ -8,6 +8,7 @@
 # $Home #
 #########
 ln -s $HOME/Repositories/dotfiles/zshrc ~/.zshrc
+ln -s $HOME/Repositories/dotfiles/gtkrc-2.0 ~/.gtkrc-2.0
 ln -s $HOME/Repositories/dotfiles/vimrc ~/.vimrc
 ln -s $HOME/Repositories/dotfiles/xprofile ~/.xprofile
 ln -s $HOME/Repositories/dotfiles/Xresources ~/.Xresources
@@ -35,7 +36,7 @@ if [ ! -d ~/.config ]
 then 
     mkdir $HOME/.config
 fi
-configs=( alacritty bspwm compton dunst nvim polybar sxhkd )
+configs=( alacritty bspwm compton dunst fontconfig gtk-3.0 nvim polybar sxhkd )
 for conf in "${configs[@]}"
 do 
     if [ ! -d ~/.config/$conf ] 
