@@ -49,7 +49,7 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 # use vi-mode
-bindkey -v
+bindkey -e
 
 # v to edit the command line (standard behaviour)
 autoload -Uz edit-command-line
@@ -72,8 +72,8 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
 # Ctrl-j/k do the same as arrow keys
-bindkey "^K" up-line-or-beginning-search
-bindkey "^J" down-line-or-beginning-search
+# bindkey "^K" up-line-or-beginning-search
+# bindkey "^J" down-line-or-beginning-search
 
 # Ctrl-z toggles control flow
 bindkey '^Z' fancy-ctrl-z

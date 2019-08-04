@@ -3,6 +3,7 @@
 alias q='exit 0'
 alias d='clear'
 
+alias l='ls'
 alias la='ls -Ah'
 alias ll='ls -lAh'
 

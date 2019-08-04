@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# kernel parameters: acpi_osi=Linux acpi_backlight=vendor intel_iommu=off i915.modeset=1
+#
+
 #########
 # $Home #
 #########
@@ -11,15 +15,15 @@ ln -s $HOME/Repositories/dotfiles/Xresources ~/.Xresources
 ##########
 ## .zsh ##
 ##########
-if [ ! -d ~/.zsh ] 
-then 
+if [ ! -d ~/.zsh ]
+then
     ln -s ~/Repositories/dotfiles/zsh ~/.zsh
 fi
 
 ##########
 # .local #
 ##########
-if [ ! -d ~/.local/bin ] 
+if [ ! -d ~/.local/bin ]
 then 
     ln -s ~/Repositories/dotfiles/bin ~/.local/bin
 fi
@@ -27,15 +31,15 @@ fi
 ###########
 # .config #
 ###########
-if [ ! -d ~/.config ] 
+if [ ! -d ~/.config ]
 then 
-	mkdir $HOME/.config
+    mkdir $HOME/.config
 fi
 configs=( alacritty bspwm compton dunst nvim polybar sxhkd )
 for conf in "${configs[@]}"
 do 
-	if [ ! -d ~/.config/$conf ] 
-	then 
-    	ln -s ~/Repositories/dotfiles/config/$conf ~/.config/$conf
-	fi
+    if [ ! -d ~/.config/$conf ] 
+    then
+        ln -s ~/Repositories/dotfiles/config/$conf ~/.config/$conf
+    fi
 done

@@ -6,7 +6,7 @@ GIT_PROMPT_DIR="${0:A:h}"
 : ${GIT_PROMPT_PREFIX="("}
 : ${GIT_PROMPT_SUFFIX="%f)"}
 : ${GIT_PROMPT_SEPARATOR="|"}
-: ${GIT_PROMPT_BRANCH="%F{magenta}"}
+: ${GIT_PROMPT_BRANCH="%F{green}"}
 : ${GIT_PROMPT_CONFLICTS="%F{red}%{x%G%}"}
 : ${GIT_PROMPT_CHANGED="%F{blue}%{+%G%}"}
 : ${GIT_PROMPT_CLEAN="%F{green}%{✔%G%}"}
@@ -15,8 +15,8 @@ GIT_PROMPT_DIR="${0:A:h}"
 # The remote branch will be shown between these two
 : ${GIT_PROMPT_UPSTREAM_FRONT=" {%F{blue}"}
 : ${GIT_PROMPT_UPSTREAM_END="%f}"}
-: ${GIT_PROMPT_MERGING="%F{magenta}|MERGING%f"}
-: ${GIT_PROMPT_REBASE="%F{magenta}|REBASE%f "}
+: ${GIT_PROMPT_MERGING="%F{green}|MERGING%f"}
+: ${GIT_PROMPT_REBASE="%F{green}|REBASE%f "}
 
 # all GUI terminals
 if [[ $TERM != 'linux' && $DISPLAY ]]; then
