@@ -126,6 +126,8 @@ XF86AudioRaiseVolume
     pamixer -i 2
 XF86AudioLowerVolume
     pamixer -d 2
+XF86AudioMicMute
+	amixer set Capture toggle	
 XF86MonBrightnessUp
     xbacklight +10
 XF86MonBrightnessDown

@@ -6,6 +6,9 @@ sxhkd &
 # us to de layout
 setxkbmap -rules evdev -model pc101 -layout de -variant us
 
+# set cursor
+xsetroot -cursor_name left_ptr
+
 # polybar 
 polybar bspwm-bar & 
 
