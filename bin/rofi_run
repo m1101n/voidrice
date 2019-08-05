@@ -46,7 +46,7 @@ for arg in "$@"; do
         -r|--run)
             rofi -modi run,drun -show drun -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "ArchLabs-Light"
+                -show-icons -drun-icon-theme "Paper"
             ;;
         -w|--window)
             rofi -modi window -show window -hide-scrollbar -padding 50 -line-padding 4
@@ -91,8 +91,8 @@ for arg in "$@"; do
 
             case "$ANS" in
                 *Lock) dm-tool lock ;;
-                *Reboot) systemctl reboot ;;
-                *Shutdown) systemctl -i poweroff ;;
+                *Reboot) sudo reboot ;;
+                *Shutdown) sudo poweroff ;;
                 *Logout) session-logout || pkill -15 -t tty"$XDG_VTNR" Xorg ;;
             esac
             ;;

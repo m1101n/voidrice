@@ -3,7 +3,7 @@
 scriptencoding utf8
 
 " Arch defaults
-runtime! archlinux.vim
+runtime! voidlinux.vim
 
 " system clipboard (requires +clipboard)
 set clipboard^=unnamed,unnamedplus
