@@ -8,7 +8,7 @@
 sudo xbps-install -S cronie socklog-void NetworkManager xorg-minimal xf86-input-synaptics xf86-video-intel alsa-utils \
 alsa-plugins-pulseaudio pamixer ConsoleKit2 bluez tlp powertop acpi acpilight xrdb xautolock \
 htop dunst feh compton curl ranger mpd ncmpcpp zathura zathura-pdf-poppler bspwm sxhkd polybar rofi base-devel \
-xrandr libXrandr udisks2 udiskie mutt alacritty vim vim-x11 neovim emacs-x11 lightdm lightdm-mini-greeter \
+xrandr libXrandr udisks2 udiskie mutt alacritty vim vim-x11 neovim emacs-x11 lightdm lightdm-gtk-greeter lightdm-mini-greeter \
 keepassxc firefox python3 python3-pip tpm-tools net-tools \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting setxkbmap \
 dejavu-fonts-ttf font-awesome ttf-material-icons paper-gtk-theme paper-icon-theme
@@ -20,6 +20,7 @@ sudo ln -s /etc/sv/nanoklogd /var/service/
 sudo ln -s /etc/sv/NetworkManager /var/service/
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/bluetoothd /var/service/
+sudo ln -s /etc/sv/acpid /var/service/
 sudo ln -s /etc/sv/tlp /var/service/
 sudo ln -s /etc/sv/tcsd /var/service/
 
@@ -29,4 +30,4 @@ sudo usermod -aG audio $USER
 sudo usermod -aG bluetooth $USER
 sudo usermod -aG input,video $USER
 
-./mksymlinks.sh
+./mksymlinks
