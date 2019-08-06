@@ -9,7 +9,7 @@ sudo xbps-install -S cronie socklog-void NetworkManager xorg-minimal xf86-input-
 alsa-plugins-pulseaudio pamixer ConsoleKit2 bluez tlp powertop acpi acpilight xrdb xautolock \
 htop dunst feh compton curl ranger mpd ncmpcpp zathura zathura-pdf-poppler bspwm sxhkd polybar rofi base-devel \
 xrandr libXrandr udisks2 udiskie mutt alacritty vim vim-x11 neovim emacs-x11 lightdm lightdm-gtk-greeter lightdm-mini-greeter \
-keepassxc firefox python3 python3-pip tpm-tools net-tools \
+keepassxc firefox python3 python3-pip tpm-tools net-tools xsetroot \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting setxkbmap \
 dejavu-fonts-ttf font-awesome ttf-material-icons paper-gtk-theme paper-icon-theme
 
