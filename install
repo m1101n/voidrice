@@ -1,7 +1,8 @@
 #!/bin/sh
 
-#
+# post installation:
 # kernel parameters: acpi_osi=Linux acpi_backlight=vendor intel_iommu=off
+# sudoers lightdm lightdm-mini-greeter
 #
 
 #install
