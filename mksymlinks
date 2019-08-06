@@ -3,7 +3,7 @@
 #########
 # $Home #
 #########
-dotfiles=( gtkrc-2.0 vimrc xprofile Xresources zshrc )
+dotfiles=( gtkrc-2.0 xprofile Xresources zshrc )
 for df in "${dotfiles[@]}"
 do
     if [ ! -d $HOME/.$df ]
