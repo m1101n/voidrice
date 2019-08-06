@@ -14,6 +14,14 @@ keepassxc firefox python3 python3-pip tpm-tools net-tools xsetroot \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting setxkbmap \
 dejavu-fonts-ttf font-awesome ttf-material-icons paper-gtk-theme paper-icon-theme
 
+./mksymlinks
+
+#add to groups
+sudo usermod -aG socklog $USER
+sudo usermod -aG audio $USER
+sudo usermod -aG bluetooth $USER
+sudo usermod -aG input,video $USER
+
 #link services
 sudo ln -s /etc/sv/cronie /var/service/
 sudo ln -s /etc/sv/socklog-unix /var/service/
@@ -24,11 +32,4 @@ sudo ln -s /etc/sv/bluetoothd /var/service/
 sudo ln -s /etc/sv/acpid /var/service/
 sudo ln -s /etc/sv/tlp /var/service/
 sudo ln -s /etc/sv/tcsd /var/service/
-
-#add to groups
-sudo usermod -aG socklog $USER
-sudo usermod -aG audio $USER
-sudo usermod -aG bluetooth $USER
-sudo usermod -aG input,video $USER
-
-./mksymlinks
+sudo ln -s /etc/sv/lightdm /var/service
