@@ -1,24 +1,24 @@
 ! Base colors
-*.foreground:  #e1e1e1
-*.background:  #1c2023
+*.foreground:  #a4a4a4
+*.background:  #131319
 *.cursorColor: #778899
 
-*.color0:  #1c2023
-*.color1:  #bf616a
-*.color2:  #a3be8c
-*.color3:  #ebcb8b
-*.color4:  #8fa1b3
-*.color5:  #b48ead
-*.color6:  #96b5b4
-*.color7:  #e1e1e1
-*.color8:  #919ba0
-*.color9:  #bf616a
+*.color0:  #13131a
+*.color1:  #ee5f66
+*.color2:  #5cbb5c
+*.color3:  #fac863
+*.color4:  #4870e0
+*.color5:  #b77ee0
+*.color6:  #5fb3b3
+*.color7:  #b7b7b7
+*.color8:  #111622
+*.color9:  #cf6666
 *.color10: #a3be8c
 *.color11: #ebcb8b
-*.color12: #8fa1b3
-*.color13: #b48ead
-*.color14: #96b5b4
-*.color15: #c0c5ce
+*.color12: #6699dd
+*.color13: #c594c5
+*.color14: #8fbcbb
+*.color15: #eaeaea
 
 
 ! Rofi
