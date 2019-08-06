@@ -18,7 +18,7 @@ super + shift + r
     pkill -USR1 -x sxhkd
 
 # quit bspwm normally
-super + x
+super + Delete
     rofi_run -l
 
 # close and kill
