@@ -9,14 +9,17 @@ setxkbmap -rules evdev -model pc101 -layout de -variant us
 # set cursor
 xsetroot -cursor_name left_ptr
 
-# polybar
-launch_polybar
-
 # launch compton
 compton &
 
+# polybar
+launch_polybar
+
 # wallpaper
 feh --no-fehbg --bg-scale "$HOME/Repositories/configs/wallpaper" &
+
+# keepassxc
+keepassxc &
 
 # external monitor
 if [ -x $HOME/.local/bin/external_monitor ];then
@@ -47,6 +50,6 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
-bspc config normal_border_color "#1c2023"
-bspc config active_border_color "#7aa6da"
-bspc config focused_border_color "#7aa6da"
+bspc config normal_border_color "#111111"
+bspc config active_border_color "#4488cc"
+bspc config focused_border_color "#4488cc
