@@ -19,11 +19,11 @@ monitor = ${env:MONITOR:eDP1}
 
 modules-left   = bspwm
 modules-center =
-modules-right  = coreuse memory battery volume date clock
+modules-right  = network coreuse memory battery volume date clock
 
 [bar/bspwm-bar-external]
 inherit = bar/master
 monitor = ${env:MONITOR:DP1-1}
 modules-left   = bspwm
 modules-center =
-modules-right  = coreuse memory volume date clock
+modules-right  = network coreuse memory volume date clock

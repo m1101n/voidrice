@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
 disconnect1="/"
 disconnect2="\\"
-wconnected=""
+wconnected=""
 econnected=""
 
 id="$(ip link | awk '/state UP/ {print $2}')"
@@ -10,11 +10,11 @@ id="$(ip link | awk '/state UP/ {print $2}')"
 while true; do
     if ping -c 1 voidlinux.org >/dev/null 2>&1; then
         [[ $id == e* ]] && echo "$econnected" || echo "$wconnected"
-        sleep 25
+        sleep 30
     else
         echo "$disconnect1"  # /
-        sleep 0.6
+        sleep 0.5
         echo "$disconnect2"  # \
-        sleep 0.6
+        sleep 0.5
     fi
 done
