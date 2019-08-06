@@ -16,7 +16,7 @@ launch_polybar
 compton &
 
 # wallpaper
-feh --no-fehbg --bg-scale "$HOME/Repositories/dotfiles/wallpaper" &
+feh --no-fehbg --bg-scale "$HOME/Repositories/configs/wallpaper" &
 
 # external monitor
 if [ -x $HOME/.local/bin/external_monitor ];then
