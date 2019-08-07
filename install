@@ -16,6 +16,8 @@ dejavu-fonts-ttf font-awesome ttf-material-icons paper-gtk-theme paper-icon-them
 
 ./mksymlinks
 
+chsh -s /bin/zsh $USER
+
 #add to groups
 sudo usermod -aG socklog $USER
 sudo usermod -aG audio $USER
@@ -33,5 +35,3 @@ sudo ln -s /etc/sv/acpid /var/service/
 sudo ln -s /etc/sv/tlp /var/service/
 sudo ln -s /etc/sv/tcsd /var/service/
 sudo ln -s /etc/sv/lightdm /var/service
-
-chsh -s /bin/zsh $USER
