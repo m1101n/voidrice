@@ -3,8 +3,10 @@
 external_monitor=$(xrandr --query | grep 'DP1-1')
 if [[ $external_monitor = *connected* ]]; then
     xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal --output DP1-1 --mode 1920x1080 --rotate normal --right-of eDP1
-    bspc monitor eDP1 -d I II III IV V
-    bspc monitor DP1-1 -d VI VII VIII IX X
+    bspc monitor eDP1 -d I II III
+    bspc monitor DP1-1 -d IV V VI VII VIII IX X
 else
     bspc monitor -d I II III IV V VI VII VIII IX X
 fi
+
+launch_polybar &

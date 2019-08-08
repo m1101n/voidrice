@@ -35,3 +35,5 @@ sudo ln -s /etc/sv/acpid /var/service/
 sudo ln -s /etc/sv/tlp /var/service/
 sudo ln -s /etc/sv/tcsd /var/service/
 sudo ln -s /etc/sv/lightdm /var/service
+
+sudo rm -r /var/service/dhcpd

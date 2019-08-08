@@ -13,7 +13,7 @@ xsetroot -cursor_name left_ptr
 compton &
 
 # polybar
-launch_polybar
+#launch_polybar
 
 # wallpaper
 feh --no-fehbg --bg-scale "$HOME/Repositories/configs/wallpaper" &
@@ -44,7 +44,7 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 bspc config paddingless_monocle true
 
-bspc config pointer_modifier mod1
+bspc config pointer_modifier mod4
 bspc config click_to_focus false
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
@@ -52,4 +52,6 @@ bspc config pointer_action3 resize_corner
 
 bspc config normal_border_color "#111111"
 bspc config active_border_color "#4488cc"
-bspc config focused_border_color "#4488cc
+bspc config focused_border_color "#4488cc"
+
+bspc rule -a "keepassxc" desktop='^10' state=tiled layout=monocle
