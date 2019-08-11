@@ -3,29 +3,17 @@
 #########
 # $Home #
 #########
-dotfiles=( gtkrc-2.0 xprofile Xresources zshrc )
+dotfiles=( xprofile Xresources zshrc )
 for df in "${dotfiles[@]}"
 do
     if [ ! -f $HOME/.$df ]
     then
-        ln -s $HOME/Repositories/configs/$df $HOME/.$df
+        ln -s $HOME/Repositories/voidrice/$df $HOME/.$df
     else
         rm $HOME/.$df
-        ln -s $HOME/Repositories/configs/$df $HOME/.$df
+        ln -s $HOME/Repositories/voidrice/$df $HOME/.$df
     fi
 done
-
-
-##########
-## .zsh ##
-##########
-if [ ! -d ~/.zsh ]
-then
-    ln -s ~/Repositories/configs/zsh ~/.zsh
-else
-    rm -r ~/.zsh
-    ln -s ~/Repositories/configs/zsh ~/.zsh
-fi
 
 
 ##########
@@ -38,10 +26,10 @@ fi
 
 if [ ! -d ~/.local/bin ]
 then
-    ln -s ~/Repositories/configs/bin ~/.local/bin
+    ln -s ~/Repositories/voidrice/bin ~/.local/bin
 else
     rm -r $HOME/.local/bin
-    ln -s ~/Repositories/configs/bin ~/.local/bin
+    ln -s ~/Repositories/voidrice/bin ~/.local/bin
 fi
 
 
@@ -52,14 +40,14 @@ if [ ! -d $HOME/.config ]
 then
     mkdir $HOME/.config
 fi
-configs=( alacritty bspwm compton dunst fontconfig gtk-3.0 nvim polybar rofi sxhkd )
+configs=( bspwm compton dunst fontconfig gtkrc-2.0 gtk-3.0 nvim polybar rofi sxhkd )
 for conf in "${configs[@]}"
 do
     if [ ! -d $HOME/.config/$conf ]
     then
-        ln -s $HOME/Repositories/configs/config/$conf ~/.config/$conf
+        ln -s $HOME/Repositories/voidrice/config/$conf ~/.config/$conf
     else
         rm -r ~/.config/$conf
-        ln -s $HOME/Repositories/configs/config/$conf ~/.config/$conf
+        ln -s $HOME/Repositories/voidrice/config/$conf ~/.config/$conf
     fi
 done

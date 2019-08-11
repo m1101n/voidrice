@@ -9,12 +9,16 @@
 sudo xbps-install -S cronie socklog-void NetworkManager xorg-minimal xf86-input-synaptics xf86-video-intel alsa-utils \
 alsa-plugins-pulseaudio pamixer ConsoleKit2 bluez tlp powertop acpi acpilight xrdb xautolock \
 htop dunst feh compton curl ranger mpd ncmpcpp zathura zathura-pdf-poppler bspwm sxhkd polybar rofi base-devel \
-xrandr libXrandr udisks2 udiskie mutt alacritty neovim emacs-x11 lightdm lightdm-gtk-greeter lightdm-mini-greeter \
-keepassxc firefox python3 python3-pip net-tools xsetroot \
+xrandr libXrandr udisks2 udiskie rxvt-unicode urxvt-perls neovim emacs-x11 lightdm lightdm-gtk-greeter lightdm-mini-greeter \
+keepassxc firefox thunderbird python3 python3-pip net-tools xsetroot xclip \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting setxkbmap \
-dejavu-fonts-ttf font-awesome ttf-material-icons paper-gtk-theme paper-icon-theme
+dejavu-fonts-ttf noto-fonts-ttf noto-fonts-cjk font-awesome ttf-material-icons paper-gtk-theme paper-icon-theme
 
 ./mksymlinks
+
+curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh install.sh
+rm install.sh
 
 chsh -s /bin/zsh $USER
 
@@ -22,7 +26,6 @@ chsh -s /bin/zsh $USER
 sudo usermod -aG socklog $USER
 sudo usermod -aG audio $USER
 sudo usermod -aG bluetooth $USER
-sudo usermod -aG input,video $USER
 
 #link services
 sudo ln -s /etc/sv/cronie /var/service/
@@ -30,7 +33,6 @@ sudo ln -s /etc/sv/socklog-unix /var/service/
 sudo ln -s /etc/sv/nanoklogd /var/service/
 sudo ln -s /etc/sv/NetworkManager /var/service/
 sudo ln -s /etc/sv/dbus /var/service/
-sudo ln -s /etc/sv/bluetoothd /var/service/
 sudo ln -s /etc/sv/acpid /var/service/
 sudo ln -s /etc/sv/tlp /var/service/
 sudo ln -s /etc/sv/lightdm /var/service

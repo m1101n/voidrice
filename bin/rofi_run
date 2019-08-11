@@ -78,17 +78,12 @@ for arg in "$@"; do
                 -mesg 'Tab for Autocomplete' -i -p 'Web Search' \
                 -padding 50 -line-padding 4)"
             ;;
+        -m|--monitor)
+            ;;
         -l|--logout)
-            if grep -q 'exec startx' $HOME/.*profile; then
-                ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
-                    -hide-scrollbar -line-padding 4 -padding 20 \
-                    -lines 3 <<< " Lock| Reboot| Shutdown")"
-            else
-                ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
-                    -hide-scrollbar -line-padding 4 -padding 20 \
-                    -lines 3 <<< " Lock| Reboot| Shutdown")"
-            fi
-
+            ANS="$(rofi -sep "|" -dmenu -i -p 'System' -width 20 \
+                -hide-scrollbar -line-padding 4 -padding 20 \
+                -lines 3 <<< " Lock| Reboot| Shutdown")"
             case "$ANS" in
                 *Lock) dm-tool lock ;;
                 *Reboot) sudo reboot ;;

@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "597x25+100+50"
+    geometry = "250x25-50+50"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -130,7 +130,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = center
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -275,21 +275,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#1c2023"
+    background = "#111111"
     foreground = "#a4a4a4"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#1c2023"
+    background = "#111111"
     foreground = "#a4a4a4"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#1c2023"
+    background = "#111111"
     foreground = "#a4a4a4"
     frame_color = "#a4a4a4"
     timeout = 10

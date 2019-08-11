@@ -1,4 +1,4 @@
-" Sane vim defaults for ArchLabs
+" Sane vim defaults for void
 
 scriptencoding utf8
 
@@ -53,16 +53,16 @@ catch
 endtry
 
 if $TERM !=? 'linux'
-    set termguicolors
+"   set termguicolors
     " true colors in terminals (neovim doesn't need this)
-    if !has('nvim') && !($TERM =~? 'xterm' || &term =~? 'xterm')
-        let $TERM = 'xterm-256color'
-        let &term = 'xterm-256color'
-    endif
-    if has('multi_byte') && $TERM !=? 'linux'
-        set listchars=tab:»»,trail:•
-        set fillchars=vert:┃ showbreak=↪
-    endif
+   if !has('nvim') && !($TERM =~? 'xterm' || &term =~? 'xterm')
+       let $TERM = 'xterm-256color'
+       let &term = 'xterm-256color'
+   endif
+   if has('multi_byte') && $TERM !=? 'linux'
+       set listchars=tab:»»,trail:•
+       set fillchars=vert:┃ showbreak=↪
+   endif
 endif
 
 " change cursor shape for different editing modes, neovim does this by default

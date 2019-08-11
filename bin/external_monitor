@@ -1,12 +1,35 @@
 #!/bin/bash
 
 external_monitor=$(xrandr --query | grep 'DP1-1')
-if [[ $external_monitor = *connected* ]]; then
-    xrandr --output eDP1 --primary --mode 1920x1080 --rotate normal --output DP1-1 --mode 1920x1080 --rotate normal --right-of eDP1
-    bspc monitor eDP1 -d I II III
-    bspc monitor DP1-1 -d IV V VI VII VIII IX X
-else
-    bspc monitor -d I II III IV V VI VII VIII IX X
-fi
+case $1 in
+    -r|--right)
+        xrandr --output eDP1 --mode 1920x1080 --rotate normal --output DP1-1 --primary --mode 1920x1080 --rotate normal --right-of eDP1 &>/dev/null
+        bspc monitor eDP1 -d I II III
+        bspc monitor DP1-1 -d IV V VI VII VIII IX X
+        ;;
+    -l|--left)
+        xrandr --output eDP1 --mode 1920x1080 --rotate normal --output DP1-1 --primary --mode 1920x1080 --rotate normal --left-of eDP1 &>/dev/null
+        bspc monitor DP1-1 -d I II III IV V VI VII
+        bspc monitor eDP1 -d  VIII IX X
+        ;;
+    -a|--above)
+        xrandr --output eDP1 --mode 1920x1080 --rotate normal --output DP1-1 --primary --mode 1920x1080 --rotate normal --above eDP1 &>/dev/null
+        bspc monitor eDP1 -d I II III
+        bspc monitor DP1-1 -d IV V VI VII VIII IX X
+        ;;
+    # very buggy, need to pull all leaves into a desktop of DP1-1 to work properly
+    #-o|--only)
+    #    xrandr --output DP1-1 --primary --mode 1920x1080 --rotate normal --output eDP1 --off &>/dev/null
+    #    bspc monitor DP1-1 -d I II III IV V VI VII VIII IX X
+    #    ;;
+    *)
+        if [[ $external_monitor = *connected* ]]; then
+            xrandr --output eDP1 --mode 1920x1080 --rotate normal --output DP1-1 --primary --mode 1920x1080 --rotate normal --right-of eDP1 &>/dev/null
+            bspc monitor eDP1 -d I II III
+            bspc monitor DP1-1 -d IV V VI VII VIII IX X
+        else
+            bspc monitor -d I II III IV V VI VII VIII IX X
+        fi
+esac
 
-launch_polybar &
+launch_polybar &>/dev/null
