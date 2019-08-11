@@ -16,9 +16,7 @@ dejavu-fonts-ttf noto-fonts-ttf noto-fonts-cjk font-awesome ttf-material-icons p
 
 ./mksymlinks
 
-curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-sh install.sh
-rm install.sh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 chsh -s /bin/zsh $USER
 
