@@ -27,6 +27,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ~/Repositories/powerline_fonts/install.sh
 ~/.emacs.d/bin/doom --insecure quickstart
 
+nvim --headless +PlugInstall +qa
+
 chsh -s /bin/zsh $USER
 
 #add to groups
