@@ -15,7 +15,7 @@ keepassxc firefox thunderbird python3 python3-pip net-tools xsetroot xclip \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting setxkbmap \
 dejavu-fonts-ttf noto-fonts-ttf noto-fonts-cjk font-awesome ttf-material-icons paper-gtk-theme paper-icon-theme
 
-./mksymlinks
+~/Repositories/voidrice/mksymlinks
 
 #get the good stuff
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.config/oh-my-zsh
