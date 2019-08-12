@@ -46,7 +46,12 @@ endif
 syntax enable
 
 " color schemes
-colorscheme nord
+try
+    colorscheme nord
+catch
+    colorscheme slate
+endtry
+
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ }
