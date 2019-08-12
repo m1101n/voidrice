@@ -3,8 +3,8 @@
 scriptencoding utf8
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " void defaults
