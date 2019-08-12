@@ -3,7 +3,7 @@
 *.background:  #111111
 *.cursorColor: #778899
 
-*.color0:  #13131a
+*.color0:  #1b2b34
 *.color1:  #ee5f66
 *.color2:  #5cbb5c
 *.color3:  #fac863
@@ -11,7 +11,7 @@
 *.color5:  #b77ee0
 *.color6:  #5fb3b3
 *.color7:  #b7b7b7
-*.color8:  #111622
+*.color8:  #4f5b66
 *.color9:  #cf6666
 *.color10: #a3be8c
 *.color11: #ebcb8b
@@ -36,8 +36,12 @@ rofi.kb-cancel: Escape
 
 
 !! URxvt Appearance
-URxvt*termName: screen-256color
-URxvt*font: xft:monospace:pixelsize:11
+URxvt*termName: rxvt-unicode-256color
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11,\
+            xft:DejaVu Sans:style=Book:size=12,\
+            xft:FontAwesome:size=12,\
+            xft:Material Icons:size=12,\
+            xft:Noto Sans:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24

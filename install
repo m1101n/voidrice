@@ -2,12 +2,13 @@
 
 # post installation:
 # kernel parameters: acpi_osi=Linux acpi_backlight=vendor intel_iommu=off
-# sudoers lightdm lightdm-mini-greeter
+# sudoers
+# lightdm lightdm-mini-greeter
 #
 
 #install
-sudo xbps-install -S cronie socklog-void NetworkManager xorg-minimal xf86-input-synaptics xf86-video-intel alsa-utils \
-alsa-plugins-pulseaudio pamixer ConsoleKit2 bluez tlp powertop acpi acpilight xrdb xautolock \
+sudo xbps-install -S cronie socklog-void NetworkManager xorg-minimal xf86-input-synaptics xf86-video-intel \
+alsa-utils alsa-plugins-pulseaudio pamixer ConsoleKit2 bluez tlp acpi acpilight xrdb xautolock \
 htop dunst feh compton curl ranger mpd ncmpcpp zathura zathura-pdf-poppler bspwm sxhkd polybar rofi base-devel \
 xrandr libXrandr udisks2 udiskie rxvt-unicode urxvt-perls neovim emacs-x11 lightdm lightdm-gtk-greeter lightdm-mini-greeter \
 keepassxc firefox thunderbird python3 python3-pip net-tools xsetroot xclip \
@@ -16,7 +17,12 @@ dejavu-fonts-ttf noto-fonts-ttf noto-fonts-cjk font-awesome ttf-material-icons p
 
 ./mksymlinks
 
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+#get the good stuff
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.config/oh-my-zsh
+git clone -b develop https://github.com/hlissner/doom-emacs ~/.emacs.d # ~/.emacs.d/bin/doom --insecure quickstart
+git clone https://github.com/powerline/fonts.git ~/Repositories/powerline_fonts # ./install.sh
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 chsh -s /bin/zsh $USER
 

@@ -16,7 +16,7 @@ compton &
 #launch_polybar
 
 # wallpaper
-feh --no-fehbg --bg-scale "$HOME/Repositories/voidrice/wallpaper" &
+feh --no-fehbg --bg-scale "$HOME/Repositories/voidrice/images/wallpaper.png" &
 
 # keepassxc
 keepassxc &

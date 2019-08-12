@@ -61,7 +61,7 @@ elseif exists('g:jinx_theme') && g:jinx_theme =~? 'midnight'
 else " night
     set background=dark
     let s:jinx.fgr    = ['#E1E1E1', 254, 15]
-    let s:jinx.bgr    = ['#4D545E', 237,  0]
+    let s:jinx.bgr    = ['#111111', 234,  0]
     let s:jinx.line   = ['#5F6772', 243,  8]
     let s:jinx.select = ['#5F6772', 243,  8]
     let s:jinx.folded = ['#5F6772', 243,  8]

@@ -2,7 +2,12 @@
 
 scriptencoding utf8
 
-" Arch defaults
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'arcticicestudio/nord-vim'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+" void defaults
 runtime! voidlinux.vim
 
 " system clipboard (requires +clipboard)
@@ -40,17 +45,14 @@ endif
 " syntax highlighting
 syntax enable
 
+" color schemes
+colorscheme nord
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
 set linebreak breakindent
 set list listchars=tab:>>,trail:~
-
-" midnight, night, or day
-let g:jinx_theme = 'midnight'
-
-try
-    colorscheme jinx
-catch
-    colorscheme slate
-endtry
 
 if $TERM !=? 'linux'
 "   set termguicolors
