@@ -12,14 +12,8 @@ xsetroot -cursor_name left_ptr
 # launch compton
 compton &
 
-# polybar
-#launch_polybar
-
 # wallpaper
 feh --no-fehbg --bg-scale "$HOME/Repositories/voidrice/images/wallpaper.png" &
-
-# keepassxc
-keepassxc &
 
 # external monitor
 if [ -x $HOME/.local/bin/external_monitor ];then
