@@ -38,7 +38,6 @@ rofi.kb-cancel: Escape
 !! URxvt Appearance
 URxvt*termName: rxvt-unicode-256color
 URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11,\
-            xft:DejaVu Sans:style=Book:size=12,\
             xft:FontAwesome:size=12,\
             xft:Material Icons:size=12,\
             xft:Noto Sans:size=12
