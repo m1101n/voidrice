@@ -20,10 +20,12 @@ dejavu-fonts-ttf noto-fonts-ttf noto-fonts-cjk font-awesome ttf-material-icons p
 #get the good stuff
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.config/oh-my-zsh
 git clone https://github.com/powerline/fonts.git ~/Repositories/powerline_fonts
+git clone -b develop https://github.com/hlissner/doom-emacs ~/.emacs.d
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ~/Repositories/powerline_fonts/install.sh
+~/.emacs.d/bin/doom --insecure quickstart
 
 nvim --headless +PlugInstall +qa
 
