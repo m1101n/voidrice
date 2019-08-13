@@ -3,7 +3,7 @@
 #########
 # $Home #
 #########
-dotfiles=( xprofile Xresources zshrc )
+dotfiles=( aliasrc xprofile Xresources zshrc )
 for df in "${dotfiles[@]}"
 do
     if [ ! -f $HOME/.$df ]

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# package manager
+alias xi='sudo xbps-install -S'
+alias xu='sudo xbps-install -Syu'
+alias xr='sudo xbps-remove -R'
+alias xo='sudo xbps-remove -Oo'
+
+# applications
+alias v='nvim'
+alias vim='nvim'
+alias z='zathura'
+alias r='ranger'
