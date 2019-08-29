@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/mien/Repositories/dotfiles/config/alacritty'
-let g:netrw_dirhist_2='/home/mien/.config/alacritty'
-let g:netrw_dirhist_3='/home/mien/Repositories/setup'
-let g:netrw_dirhist_4='/home/mien/Repositories/configs/config/polybar'
-let g:netrw_dirhist_5='/home/mien/Repositories/configs/config/alacritty'
-let g:netrw_dirhist_6='/home/mien/.emacs.d/.git'
-let g:netrw_dirhist_7='/home/mien/.zsh'
-let g:netrw_dirhist_8='/home/mien/Repositories/configs/zsh/themes'
-let g:netrw_dirhist_9='/home/mien/Repositories'
+let g:netrw_dirhist_cnt =0
